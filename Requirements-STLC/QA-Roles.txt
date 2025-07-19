@@ -1,0 +1,1 @@
+QA is responsible for understanding requirements, writing test cases, executing them, and logging defects clearly to help deliver a quality product.
