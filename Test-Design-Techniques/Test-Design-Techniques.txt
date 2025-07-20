@@ -1,0 +1,77 @@
+Understand how test cases are created using different Test Design Techniques — strategies used to select test cases that are effective, efficient, and cover more bugs with fewer tests.
+
+Why are Test Design Techniques Important?
+- Improve test coverage
+- Save time and effort
+- Help detect more bugs
+- Avoid redundant tests
+
+🧠 Types of Test Design Techniques
+
+Test Design Techniques are divided into two categories:
+1. Black Box Testing Techniques (based on system functionality)
+2. Experience-Based Techniques (based on tester's intuition and domain knowledge)
+
+🔸 1. Black Box Testing Techniques
+
+✅ a) Equivalence Partitioning (EP)
+Idea: Divide input data into valid and invalid partitions. Choose one value from each.
+Example: Age field accepts 18–60
+- Valid: 18–60 → Pick one value, e.g. 30
+- Invalid: <18, >60 → Pick one value from each, e.g. 15, 70
+
+✅ b) Boundary Value Analysis (BVA)
+Idea: Test edge values around the boundaries — where bugs often hide.
+Example: Age input accepts 18–60
+- Test: 17 (just below), 18 (minimum), 19
+- Test: 59, 60, 61 (just above)
+
+✅ c) Decision Table Testing
+Idea: Create a table of inputs (conditions) and their outcomes (actions).
+Example:
+| Condition A | Condition B | Action        |
+|-------------|-------------|---------------|
+| Y           | Y           | Allow access  |
+| Y           | N           | Deny access   |
+| N           | Y           | Deny access   |
+| N           | N           | Deny access   |
+
+✅ d) State Transition Testing
+Idea: Test system behavior when changing from one state to another.
+Example: ATM Card
+- States: Active → Blocked → Expired
+- Transitions: Insert → PIN → Withdraw → Logout
+
+✅ e) Error Guessing
+Idea: Use your experience or domain knowledge to guess where bugs may occur.
+Examples:
+- Submitting form without entering required fields
+- Entering SQL code in input field
+
+🔸 2. Experience-Based Techniques
+
+| Technique           | Description                                      |
+|---------------------|--------------------------------------------------|
+| Exploratory Testing | Freestyle testing without scripts, based on intuition |
+| Ad-hoc Testing      | No formal documentation, test randomly           |
+| Checklist-Based     | Use a pre-defined checklist of areas to cover   |
+
+📌 Summary Table
+
+| Technique              | Best Used For             |
+|------------------------|---------------------------|
+| Equivalence Partitioning | Form validations        |
+| Boundary Value Analysis | Numeric ranges           |
+| Decision Table          | Business rules           |
+| State Transition        | Login/logout, workflows  |
+| Error Guessing          | Complex, hidden bugs     |
+
+🧪 Real-World Example: Login Form Testing
+
+| Field     | Technique        | Example Test                  |
+|-----------|------------------|-------------------------------|
+| Username  | EP               | "user123" (valid), "us" (invalid) |
+| Password  | BVA              | 5, 6, 7 character passwords   |
+| Login     | Decision Table   | Valid/Invalid Username + Password |
+| Remember Me | State Transition | On → Off → On again         |
+| SQL Injection | Error Guessing | Input: `' or 1=1--`         |
