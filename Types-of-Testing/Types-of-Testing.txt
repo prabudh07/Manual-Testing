@@ -1,0 +1,41 @@
+DAY 2: TYPES OF TESTING (Manual Testing)
+PART 1: Testing Classifications in Manual Testing
+1. Based on Execution:
+Type	Description
+Manual Testing	Human tester executes test cases without automation. Used in most real-world scenarios initially.
+Automation Testing	Uses tools (like Selenium, Cypress, etc.) to automate tests. Focus of later stages in your career.
+
+2. Based on Code Knowledge:
+Type	Description
+Black Box Testing	Tester doesn’t know internal code. Focuses only on inputs & outputs. (Manual testers mostly do this.)
+White Box Testing	Code-level testing done by developers or automation engineers (e.g., unit testing).
+Grey Box Testing	Tester has limited knowledge of code or architecture. Helpful in integration testing.
+
+ PART 2: Functional Testing – (Tests What the system does)
+Functional testing checks features and business logic. You’ll use this most in Manual QA.
+All Functional Testing Types:
+Test Type	Purpose	Real-World Example
+Smoke Testing	Basic checks to verify if the app is stable enough for further testing	App login loads correctly after deployment
+Sanity Testing	Narrow checks after bug fix to confirm specific functionality	“Forgot password” feature works after fix
+Regression Testing	Ensures old functionalities still work after a change	Test full checkout flow after adding a new payment method
+Re-testing	Re-running failed test cases after defects are fixed	Bug in signup page re-tested after developer patch
+Integration Testing	Test how multiple components/modules work together	Cart and payment modules interacting properly
+System Testing	Full end-to-end test of the entire application	A complete user journey: Sign up → Search → Buy item
+UAT (User Acceptance Testing)	Testing done by client or end-users before going live	Client uses the system in real scenarios to approve it
+Interface Testing	Verifies communication between systems (APIs, databases, etc.)	Payment gateway connects correctly with bank API
+Accessibility Testing	Ensures app is usable by disabled users	Screen reader works for visually impaired users
+
+ PART 3: Non-Functional Testing – (How the system works)
+ All Non-Functional Testing Types:
+Test Type	Purpose	Real-World Example
+Performance Testing	Checks speed, stability, and responsiveness	App loads in <2 seconds under load
+Load Testing	Tests system under expected number of users	500 users accessing login at once
+Stress Testing	Tests system beyond normal capacity	App under 2000 users crashes gracefully
+Scalability Testing	Check how well the system can scale with traffic	Increase users from 100 to 10,000
+Usability Testing	Evaluates user experience and ease of use	New users can finish sign-up within 1 min
+Security Testing	Finds vulnerabilities and checks data protection	App doesn’t allow SQL injection
+Compatibility Testing	Ensures app works on all browsers/devices/OS	iPhone Safari & Android Chrome both supported
+Reliability Testing	App runs stable under continuous use	App runs 12 hours with no crash or memory leak
+Maintainability Testing	How easy it is to fix or update the app	Developer updates version in 1 hour
+Compliance Testing	Checks if the app follows legal/industry standards	App follows GDPR data protection norms
+
